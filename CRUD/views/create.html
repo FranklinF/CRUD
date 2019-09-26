@@ -1,0 +1,81 @@
+<html>
+    <head>
+		<script src="/assets/app/js/vuex.js"></script>
+		<script src="/assets/app/js/vue.js"></script>
+		<script src="/assets/app/js/vue-router.js"></script>
+		<script src="/assets/app/js/axios.min.js"></script>
+		<script src="/assets/app/js/lodash.min.js"></script>
+        <script src="/assets/app/js/webfont.js"></script>
+        <div>Create Stundent</div>
+    </head>
+    <body>
+           <div id="page">
+            <form >
+                <table>
+                 <tr>
+                     <td>   
+                         <div>
+                         <label>Stundent Id</label>
+                         </div> 
+                         <div>
+                         <input type='text'v-model="id"></input>
+                         </div>
+                     </td>
+                 </tr>
+                <tr>
+                    <td>
+                         <div>
+                                 <label>Stundent Name</label> 
+                         </div>
+                         <div>
+                                 <input type='text' v-model="name"></input>
+                         </div>
+                     </td>
+                 </tr>
+                <tr>
+                    <td>
+                         <div>
+                                 <label>Roll Number</label> 
+                         </div>
+                         <div>
+                                 <input type='text'v-model="rollnumber"></input>
+                         </div>
+                     </td>
+                 </tr>
+                 <tr>
+                     <td>
+                         <button id="btn-submit"v-on:click="submitdata($event)">Submit</button>
+                         <button id="btn-clear"v-on:click="cleardata($event)">New</button>
+                    </td>
+                </tr>
+                 </table>
+             </form>
+           <table>
+            <thead>
+                <tr>
+                    <td>
+                        Id
+                    </td>
+                    <td>
+                        Name
+                    </td>
+                    <td>
+                        Roll Number
+                    </td>
+                  </tr>
+            </thead>
+            <tbody>
+                <tr v-for="val in myData">
+                <td>{{val.id}}</td>
+                <td>{{val.name}}</td>
+                <td>{{val.rollnumber}}</td>
+                <td><button v-on:click="deleteRecord(val._id)">Delete</button></td>
+                <td><button v-on:click="editRecord(val,'1')">Edit</button></td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        <script src="/js/views/create.js" type="text/javascript"></script>
+        
+    </body>
+</html>

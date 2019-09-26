@@ -1,0 +1,24 @@
+{
+  "name": "franklin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "basic-auth": "^2.0.1",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^4.1.0",
+    "bootstrap-vue": "^2.0.0-rc.7",
+    "express": "^4.17.1",
+    "mongoose": "^5.6.3",
+    "openapi": "0.0.0-placeholder",
+    "path": "^0.12.7",
+    "save": "^2.4.0",
+    "swagger-jsdoc": "^3.2.9",
+    "swagger-ui-express": "^4.0.7"
+  }
+}
